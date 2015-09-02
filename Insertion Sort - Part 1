@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+static void insertionSort(int[] ar) {
+    int insertionVal = ar[ar.Length-1];
+    if(ar.Length-1 == 0){
+        return;
+    }
+    for(int i=(ar.Length-1); i >= 0; i--){
+        if(i == 0
+          && ar[i] > insertionVal){
+            ar[i] = insertionVal;
+            Console.WriteLine(String.Join(" ",ar));
+            break;
+        }
+        else if(i == 0){
+            break;
+        }
+        else if(ar[i-1] > insertionVal){
+            ar[i] = ar[i-1];
+        }
+        else if(ar[i-1] <= insertionVal){
+            ar[i] = insertionVal;
+            Console.WriteLine(String.Join(" ",ar));
+            break;
+        }
+        Console.WriteLine(String.Join(" ",ar));
+    }
+}
+/* Tail starts here */
+    static void Main(String[] args) {
+           
+           int _ar_size;
+           _ar_size = Convert.ToInt32(Console.ReadLine());
+           int [] _ar =new int [_ar_size];
+           String elements = Console.ReadLine();
+           String[] split_elements = elements.Split(' ');
+           for(int _ar_i=0; _ar_i < _ar_size; _ar_i++) {
+                  _ar[_ar_i] = Convert.ToInt32(split_elements[_ar_i]); 
+           }
+
+           insertionSort(_ar);
+    }
+}
