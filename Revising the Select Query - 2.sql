@@ -2,7 +2,4 @@
 Enter your query here.
 Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
 */
-select Name
-from City
-where CountryCode = 'USA'
-    and Population > 120000
+select Name from City where CountryCode = 'USA' and Population > 120000;
