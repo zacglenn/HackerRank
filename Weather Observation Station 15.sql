@@ -21,5 +21,5 @@ Please append a semicolon ";" at the end of the query and enter your query in a 
 */
 select top 1 cast(long_w as numeric(10,4))
 from station
-where cast(lat_n as numeric(10,4)) <= 137.2345
+where cast(lat_n as numeric(10,4)) < 137.2345
 order by lat_n desc;
